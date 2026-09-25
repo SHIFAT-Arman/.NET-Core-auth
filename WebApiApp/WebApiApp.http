@@ -1,0 +1,26 @@
+@WebApiApp_HostAddress = http://localhost:5055
+
+GET {{WebApiApp_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+POST {{WebApiApp_HostAddress}}/api/Auth/register
+Content-Type: application/json
+
+{
+  "Name": "Shifat Arman",  
+  "Email": "shifatshiam@example.com",
+  "Password": "shifatshiam@example.com"
+}
+
+###
+POST {{WebApiApp_HostAddress}}/api/Auth/Login
+Content-Type: application/json
+
+{
+  "Email": "shifatshiam@example.com",
+  "Password": "shifatshiam@example.com"
+}
+
+###
+GET {{WebApiApp_HostAddress}}/api/Auth/AdminOnlyEndpoint
